@@ -5,7 +5,7 @@ This is a simple Python program to use the weasure to automatically get quotes f
 the [Weasure](http://www.weasure.com/) scale.
 
 When you run the script, it should open a web browser.  Fill in the city, zip and value (insurance)
-for your package.  When you hit the "GetRate" button, it'll look up the price on the UPS web site.
+for your package.  When you hit the "Get Rate" button, it'll look up the price on the UPS web site.
 
 Note by default, the script does NOT use Weasure.  If you do actually have the scale connected, you'll need to
 delete the `return` in `UpdateMeasurements`, and make sure Weasure is connected to your serial port.
