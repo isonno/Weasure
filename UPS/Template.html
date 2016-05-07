@@ -1,0 +1,88 @@
+<HTML>
+<!--Form template to get the user information from Weasure and display the results.-->
+<!--See comment below for special anchor tabs that get substituted-->
+<!-- (c) 2005 John W Peterson -->
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Weasure - UPS Cost Estimator</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<FORM ACTION="/ship" ENCTYPE="x-www-form-urlencoded" METHOD="POST">
+<H1>UPS Shipping Rate Calculator</H1>
+
+<H3>Package Origin:</H3>
+
+<DIV>
+<TABLE WIDTH="278" BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="79%" ALIGN="CENTER">City</TD>
+    <TD WIDTH="21%" ALIGN="CENTER">Zip</TD>
+  </TR>
+  <TR>
+    <TD WIDTH="79%"><INPUT NAME="origCity" TYPE="text" SIZE="25"
+      VALUE="Menlo Park" MAXLENGTH="25">
+    </TD>
+    <TD WIDTH="21%"><INPUT NAME="15_origPostal" TYPE="text" SIZE="5"
+      VALUE="94025" MAXLENGTH="5">
+    </TD>
+  </TR>
+</TABLE>
+</DIV>
+
+<H3>Package Destination:</H3>
+
+<DIV>
+<TABLE WIDTH="305" BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="61%" ALIGN="CENTER">City</TD>
+    <TD WIDTH="17%" ALIGN="CENTER">Zip</TD>
+    <TD WIDTH="22%" ALIGN="CENTER">Value</TD>
+  </TR>
+  <TR>
+    <TD WIDTH="61%"><INPUT NAME="20_destCity" TYPE="text" SIZE="25"
+      VALUE="San Jose" MAXLENGTH="30"></TD>
+    <TD WIDTH="17%"><INPUT NAME="19_destPostal" TYPE="text" SIZE="5"
+      VALUE="95110" MAXLENGTH="5"></TD>
+    <TD WIDTH="22%"><INPUT NAME="24_value" TYPE="text" SIZE="5" 
+      VALUE="25" MAXLENGTH="5"></TD>
+  </TR>
+</TABLE>
+</DIV>
+<P></P>
+<DIV>
+    <INPUT NAME="GetRate" TYPE="submit" VALUE="Get Rate">
+</DIV>
+</FORM>
+
+<HR ALIGN=LEFT><BR>
+<H3>Package Size:</H3>
+
+
+<FORM ACTION="/weasure" ENCTYPE="x-www-form-urlencoded" METHOD="POST">
+<TABLE WIDTH="292" BORDER="1" CELLSPACING="2" CELLPADDING="0"
+HEIGHT="54">
+  <TR>
+    <TD WIDTH="36%" HEIGHT="23">Weight</TD>
+    <TD WIDTH="21%" HEIGHT="23">Height</TD>
+    <TD WIDTH="20%" HEIGHT="23">Width</TD>
+    <TD WIDTH="23%" HEIGHT="23">Depth</TD>
+  </TR>
+  <TR>
+    <!--These anchor tabs correspond with the POST data tags sent to the UPS-->
+    <!--web site to get pricing information.  The "00" part of the field inside-->
+    <!--the anchor tab is replaced by the data collected by the Weasure scale.-->
+    <TD WIDTH="36%" HEIGHT="22"><A NAME="23_weight">00</A> lbs</TD>
+    <TD WIDTH="21%" HEIGHT="22"><A NAME="27_height">00</A>&quot;</TD>
+    <TD WIDTH="20%" HEIGHT="22"><A NAME="26_width">00</A>&quot;</TD>
+    <TD WIDTH="23%" HEIGHT="22"><A NAME="25_length">00</A>&quot;</TD>
+  </TR>
+</TABLE></P>
+
+<P><INPUT NAME="UpdateSize" TYPE="submit" VALUE="Update Size and Weight">
+</FORM>
+<HR>
+<B><A href="/quit">Quit Server</A></B>
+
+</BODY>
+</HTML>
