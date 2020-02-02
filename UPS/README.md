@@ -1,7 +1,7 @@
 Weasure UPS Demo
 ================
 
-This is a simple Python program to use the weasure to automatically get quotes from UPS.  It was built to demonstreate
+This is a simple Python program to use the weasure to automatically get quotes from UPS.  It was built to demonstrate
 the [Weasure](http://www.weasure.com/) scale.
 
 When you run the script, it should open a web browser.  Fill in the city, zip and value (insurance)
