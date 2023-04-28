@@ -11,3 +11,5 @@ Note by default, the script does NOT use Weasure.  If you do actually have the s
 delete the `return` in `UpdateMeasurements`, and make sure Weasure is connected to your serial port.
 
 The UPS API is documented in the [UPS Rates and Services Online guide](https://www.ups.com/gec/techdocs/pdf/RatesandServiceHTML.pdf).
+
+**Note** This was implemented in Python 2 many years ago. There's no guarentee this code still runs or UPS still supports the same web APIs.
